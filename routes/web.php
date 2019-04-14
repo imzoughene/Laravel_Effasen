@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/me', function () {
+    return 'Imzoughene Youssef';
+});
+Route::get('/moi', function () {
+    return '<h1>Imzoughene Youssef</h1>';
+});
+Route::get('/about', function () {
+    return view('pages.about');
+});
+Route::get('/name/{name}/{age}', function ($name, $age) {
+    return 'my name is : '.$name.' my age is : '.$age;
+});
