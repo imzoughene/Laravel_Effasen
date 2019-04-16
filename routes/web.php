@@ -20,9 +20,6 @@ Route::get('/me', function () {
 Route::get('/moi', function () {
     return '<h1>Imzoughene Youssef</h1>';
 });
-Route::get('/about', function () {
-    return view('pages.about');
-});
-Route::get('/name/{name}/{age}', function ($name, $age) {
-    return 'my name is : '.$name.' my age is : '.$age;
-});
+Route::get('/about', 'PagesController@about');
+Route::get('/index', 'PagesController@index');
+Route::get('/progLanguages', 'PagesController@progLanguages');
