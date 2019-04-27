@@ -7,16 +7,25 @@ class PagesController extends Controller
     public function index()
     {
         //return 'youssef imzoughene , age : '.(2019 - 1993);
-        return view('pages.index');
+        //return view('pages.index');
+        $name = "khadija ouchrih";
+        return view('pages.index',compact('name'));
     }
 
     public function about()
     {
-        return view('pages.about');
+        $name = 'soukaina fouaji';
+        return view('pages.about')->with('name',$name);
     }
 
     public function progLanguages()
     {
-        return view('pages.proglanguages');
+        $girlFriends = [
+            'soka'=>'sokaina fouaji',
+            'khad'=>'Khadija ouchrih',
+            'ibno'=>'soukaina ibnou kady',
+            'fat'=>'fatime hiyashu'
+        ];
+        return view('pages.proglanguages',compact('girlFriends'));
     }
 }
