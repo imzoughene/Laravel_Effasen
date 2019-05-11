@@ -9,7 +9,10 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{{ asset('css/lemon-bootstrap.css') }}">
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        
+        
         <!-- Styles -->
         <style>
             html, body {
@@ -62,12 +65,27 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+            .navbar-dark .navbar-nav .nav-link {
+                font-size: 20px;
+                font-weight: bold;
+            }
+            .ml-auto{
+                float:right;
+            }
+            img.slide{
+                height: 460px !important;
+                width: 100%;
+            }
         </style>
     </head>
     <body>
        @include('includes.navbar')
+       @include('includes.slider')
        <div class="container">
             @yield('content')
-       </div>    
+       </div>  
+        <script src="{{ asset('js/app.js') }}"></script>
+        <script src="{{ asset('js/jquery.min.js') }}"></script>
+        <script src="{{ asset('js/bootstrap.min.js') }}"></script>  
     </body>
 </html>
