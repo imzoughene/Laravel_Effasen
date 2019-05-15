@@ -10,3 +10,14 @@ php artisan make:model Post -m
 npm run dev
 ===========
 php artisan migrate
+===========
+php artisan tinker
+===========
+App\Post::count()
+===========
+$post = new App\Post()
+$post->subject = 'Java'
+$post->firstname='youssef'
+$post->lastname='imzoughene'
+$post->body='I dream to be a developer'
+$post->save()
