@@ -80,7 +80,7 @@
     </head>
     <body>
        @include('includes.navbar')
-       @include('includes.slider')
+       
        <div class="container">
             @yield('content')
        </div>  
