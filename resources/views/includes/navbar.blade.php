@@ -17,6 +17,9 @@
         <li class="nav-item">
           <a class="nav-link" href="/progLanguages">Programming languages</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/posts">Posts</a>
+        </li>
       </ul>
       <ul class="nav navbar-nav ml-auto">
         <li class="nav-item">
