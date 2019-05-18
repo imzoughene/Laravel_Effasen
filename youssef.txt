@@ -4,6 +4,7 @@ php artisan serve
 ===========
 php artisan make:controller PagesController
 php artisan make:controller PostsController
+php artisan make:controller PostsController --resource
 ===========
 php artisan make:model Post -m
 ===========
@@ -21,3 +22,5 @@ $post->firstname='youssef'
 $post->lastname='imzoughene'
 $post->body='I dream to be a developer'
 $post->save()
+============
+php artisan route:list
