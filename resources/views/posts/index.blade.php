@@ -15,7 +15,7 @@
                         <h5 class="card-title">{{ $item->firstname.' | '.$item->lastname }}</h5>
                         <span class="badge badge-pill badge-danger">Created at : {{ $item->created_at }}</span>
                         <br>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="/posts/{{ $item->id }}" class="btn btn-warning pull-right">More</a>
                     </div>
                     </div>
                 </div>
