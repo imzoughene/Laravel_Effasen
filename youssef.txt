@@ -22,5 +22,19 @@ $post->firstname='youssef'
 $post->lastname='imzoughene'
 $post->body='I dream to be a developer'
 $post->save()
+===========
+$post = new App\Post()
+$post->subject = 'PHP'
+$post->firstname='youssef'
+$post->lastname='imzoughene'
+$post->body='I dream to be a php developer'
+$post->save()
+===========
+$post = new App\Post()
+$post->subject = 'ANGULAR'
+$post->firstname='youssef'
+$post->lastname='imzoughene'
+$post->body='I dream to be a angular developer'
+$post->save()
 ============
 php artisan route:list
