@@ -21,6 +21,11 @@
                 </div>
                 @endforeach      
             </div>
+            <div class="row">
+                <div class="col-4 offset-4">
+                    {{  $posts->links() }}
+                </div>
+            </div>
         </div>
     @else
     <div class="alert alert-dismissible alert-danger">
