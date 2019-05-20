@@ -20,6 +20,9 @@
         <li class="nav-item">
           <a class="nav-link" href="/posts">Posts</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/posts/create">new post</a>
+        </li>
       </ul>
       <ul class="nav navbar-nav ml-auto">
         <li class="nav-item">
