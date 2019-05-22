@@ -39,7 +39,19 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request,[
+            'subject'=>'required',
+            'body'=>'required'
+        ]);
+        //return $request->all();
+        $p = new Post();
+        $p->subject=$request->subject;
+        $p->firstname=$request->firstname;
+        $p->lastname=$request->lastname;
+        $p->body=$request->body;
+        $p->save();
+        //return $p;
+        return redirect('/posts')->with('success','Done successfully');
     }
 
     /**
