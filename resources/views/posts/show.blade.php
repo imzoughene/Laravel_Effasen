@@ -11,7 +11,7 @@
                     <h5 class="card-header"><b>{{ $post->subject }}</b></h5>
                     <div class="card-body text-left">
                         <h5 class="card-title">{{ $post->firstname.' | '.$post->lastname }}</h5>
-                        <p style="color:black"><b>{{ $post->body }}</b></p>
+                        <p style="color:black"><b>{!! $post->body !!}</b></p>
                         <span class="badge badge-pill badge-danger">Created at : {{ $post->created_at }}</span>
                         <br>
                     </div>
