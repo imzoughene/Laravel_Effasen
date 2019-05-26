@@ -25,3 +25,6 @@ Route::get('/', 'PagesController@index')->name('home');
 Route::get('/about', 'PagesController@about')->name('about');
 Route::get('/progLanguages', 'PagesController@progLanguages')->name('programming languages');
 Route::resource('posts', 'PostsController');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -1,24 +1,25 @@
-@extends('layout.app')
+@extends('layouts.app')
 @section('content')
 <div class="content">
     <div class="title m-b-md">
-        Posts
+       <h1>Posts</h1> 
     </div>
+    <br><br>
     @if(count($posts)>0)
         <div class="container">
             <div class="row">
-                @foreach ($posts as $item)
+                @foreach ($posts as $item) 
                 <div class="col-sm-4">
-                    <div class="card text-white bg-primary">
-                    <h5 class="card-header"><b>{{ $item->subject }}</b></h5>
-                    <div class="card-body text-left">
-                        <h5 class="card-title">{{ $item->firstname.' | '.$item->lastname }}</h5>
-                        <span class="badge badge-pill badge-danger">Created at : {{ $item->created_at }}</span>
-                        <br>
-                        <a href="/posts/{{ $item->id }}" class="btn btn-warning pull-right">More</a>
+                    <div class="panel panel-default"> 
+                        <div class="panel-heading">{{ $item->firstname.' | '.$item->lastname }}</div>
+                        <div class="panel-body">
+                            <h3>{{ $item->subject }}</h3>
+                            <span class="text-success">Created at : {{ $item->created_at }}</span>
+                            <br>
+                            <a href="/posts/{{ $item->id }}" class="btn btn-warning pull-right">More</a>
+                        </div>
                     </div>
-                    </div>
-                </div>
+                </div> 
                 @endforeach      
             </div>
             <div class="row">

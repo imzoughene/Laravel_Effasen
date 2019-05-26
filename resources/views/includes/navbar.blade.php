@@ -11,18 +11,7 @@
         <li class="nav-item active">
           <a class="nav-link" href="/">Imzoughene <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/progLanguages">Programming languages</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/posts">Posts</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/posts/create">new post</a>
-        </li>
+       
       </ul>
       <ul class="nav navbar-nav ml-auto">
         <li class="nav-item">

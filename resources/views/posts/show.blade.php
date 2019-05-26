@@ -1,25 +1,31 @@
-@extends('layout.app')
+@extends('layouts.app')
 @section('content')
 <div class="content">
     <div class="title m-b-md">
-        Post details
+        <h1>Post details</h1> 
     </div>
+    <br><br><br>
         <div class="container">
             <div class="row">
                 <div class="col-6 offset-3">
-                    <div class="card text-white bg-primary">
-                    <h5 class="card-header"><b>{{ $post->subject }}</b></h5>
-                    <div class="card-body text-left">
-                        <h5 class="card-title">{{ $post->firstname.' | '.$post->lastname }}</h5>
-                        <p style="color:black"><b>{!! $post->body !!}</b></p>
-                        <span class="badge badge-pill badge-danger">Created at : {{ $post->created_at }}</span>
-                        <br>
-                    </div>
-                    <a href="/posts" class="btn btn-warning pull-right">Back</a>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">{{ $post->subject }}</div>
+                        <div class="panel-body">
+                                <h5>{{ $post->firstname.' | '.$post->lastname }}</h5>
+                                <p><b>{!! $post->body !!}</b></p>
+                                <span>Created at : {{ $post->created_at }}</span>
+                                <br><br><br>
+                                {!! Form::open(array("action"=>["PostsController@destroy",$post->id],"method"=>"POST")) !!}
+                                {!! Form::hidden('_method', 'DELETE') !!}
+                                {!! Form::submit("Delete",["class"=>"btn btn-danger"]) !!}
+                                {!! Form::close() !!}
+                                <br>
+                                <a href="/posts/{{ $post->id }}/edit" class="btn btn-lg">Edit</a>
+                                <a href="/posts" class="btn btn-warning">Back</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-     
+        </div>  
 </div>
 @endsection

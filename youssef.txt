@@ -38,3 +38,5 @@ $post->body='I dream to be a angular developer'
 $post->save()
 ============
 php artisan route:list
+============
+php artisan make:auth
